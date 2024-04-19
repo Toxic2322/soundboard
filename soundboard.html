@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .button-row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-row">
+        <button onclick="playSound('Bruh.mp3')">Bruh</button>
+        <button onclick="playSound('Korn.mp3')">Twist</button>
+        <button onclick="playSound('Dark Souls Boss Music.mp3')">Boss Music</button>
+    </div>
+    <div class="button-row">
+        <button onclick="playSound('hello-im-emu-otori.mp3')">Hello!</button>
+        <button onclick="playSound('WHEEZY OUTTA HERE.mp3')">WHEEZY</button>
+        <button onclick="playSound('Me and the Birds.mp3')">Me and the Birds</button>
+    </div>
+    <button onclick="stopSound()">Stop</button>
+</div>
+<div class="button-row">
+    <button onclick="playSound('make the ground shake.mp3')">Epic Dubstep</button>
+    <button onclick="playSound('Hell Naw dog.mp3')">Hell Naw</button>
+    <button onclick="playSound('wolves kanye.mp3')">Wolves Kanye</button>
+
+    <script>
+        var audio = new Audio();
+
+        function playSound(filename) {
+            if(!audio.paused) {
+                audio.pause();
+            }
+            audio = new Audio(filename);
+            audio.play();
+        }
+
+        function stopSound() {
+            if(!audio.paused) {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
